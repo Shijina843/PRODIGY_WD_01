@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 1200px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+header {
+    transition: background-color 0.3s;
+}
+
+header:hover {
+    background-color: #e7eec3; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-image: url('https://images.pexels.com/photos/5409770/pexels-photo-5409770.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero header {
+    padding: 20px 0;
+    position: relative;
+    z-index: 2; 
+}
+
+.hero header .logo h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff; 
+}
+
+.hero header .logo h2 span {
+    color: #ffafcc;
+}
+
+.hero header nav ul {
+    list-style: none;
+}
+
+.hero header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.hero header nav ul li a {
+    font-weight: 600;
+    color: #fff; 
+    transition: color 0.3s;
+}
+
+.hero header nav ul li a:hover {
+    color: #ff85a2; 
+}
+
+.hero header nav ul li.action a {
+    background: #c94b7f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background 0.3s;
+}
+
+.hero header nav ul li.action a:hover {
+    background: #ff85a2; 
+}
+
+.details {
+    margin-top: 150px;
+    text-align: center;
+    position: relative;
+    z-index: 2; 
+}
+
+.details h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff; 
+}
+
+.details p {
+    font-size: 18px;
+    color: #fff;
+    max-width: 600px;
+    margin: 20px auto 40px;
+}
+
+.details a {
+    background: #c94b7f;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.details a:hover {
+    background: #ff85a2; 
+}
+
+.connect {
+    margin-top: 80px;
+    text-align: center;
+    position: relative;
+    z-index: 2; 
+}
+
+.connect h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    color: #fff; 
+    margin-bottom: 20px;
+}
+
+.connect .links a {
+    font-size: 20px;
+    color: #fff;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.connect .links a:hover {
+    color: #ff85a2; 
+}
+
+
+.hamb {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .details h1 {
+        font-size: 36px;
+    }
+
+    .hamb {
+        display: block;
+        width: 40px;
+        height: 30px;
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    .hamb span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        margin: 7px 0;
+        transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff5f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.3s;
+    }
+
+    .menu-overlay.active {
+        transform: translateX(0);
+    }
+
+    .menu-overlay ul {
+        list-style: none;
+        text-align: center;
+    }
+
+    .menu-overlay ul li {
+        margin: 20px 0;
+    }
+
+    .menu-overlay ul li a {
+        font-size: 24px;
+        color: #c94b7f;
+    }
+
+    .menu-overlay ul li.action a {
+        background: #c94b7f;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 30px;
+    }
+}
